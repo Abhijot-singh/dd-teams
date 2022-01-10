@@ -6,14 +6,13 @@ import Doionsimg from "../images/Doionsimg.png"
 import Model from './Model';
 function Header() {
     const [Open, setOpen] = useState(false);
-    const [Burger, setBurger] = useState(false);
     function handler(){
       setOpen(true);
     }
-    function burgerHandler(){
-      console.log("hello");
-      setBurger(true);
-    }
+    // function burgerHandler(){
+    //   console.log("hello");
+    //   setBurger(true);
+    // }
     return (  
         <div>
     <header class="header">
@@ -32,19 +31,19 @@ function Header() {
           <li class="nav-item">
             <a href="https://doions-education.myty.in/" className="nav-link">Blog</a>
           </li>
-          <li className="nav-item">
+          <li className="nav-item" >
                 <button 
+                  onClick={handler}
                   type="button"
                   class="btn enquire_btn btn-lg fw-bold me-4 my-4"
                   data-bs-toggle="modal"
                   data-bs-target="#exampleModal"
-                  onClick={handler}
                 >
                   Enquire now
                 </button>
           </li>
         </ul>
-        <div class="hamburger" onClick={burgerHandler}>
+        <div class="hamburger" >
           <span className="bar"></span>
           <span className="bar"></span>
           <span className="bar"></span>
@@ -55,6 +54,7 @@ function Header() {
         </div>
   
     );
+
 }
 
 export default Header;

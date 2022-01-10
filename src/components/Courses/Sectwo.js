@@ -18,7 +18,6 @@ function Sectwo() {
             </div>
           </div>
              <Opensectwo Open={Open}
-
              />
         </div>
     );
