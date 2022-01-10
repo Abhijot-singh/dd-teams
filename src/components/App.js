@@ -1,13 +1,33 @@
 import React from "react";
 import "../styles/App.css";
 import Homepage from "./Homepage";
+import AboutusPage from "./AboutusPage";
+import Courses from "./Courses";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+} from "react-router-dom";
 function App() {
   return( 
-  <div className="App">
-   <div className="main-container">
-      <Homepage/>
-   </div>
+<Router>
+
+<div>
+
+  <Switch>
+    <Route exact path="/"  >
+<Homepage/>
+    </Route>
+    <Route path="/aboutus-page">
+    <AboutusPage/>
+    </Route>
+    <Route path='/courses'>
+    <Courses/>
+    </Route>
+  </Switch>
   </div>
+</Router>
+  
   );
 }
 

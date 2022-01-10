@@ -361,9 +361,8 @@ a {
 }  
 
 
-
-
-
-
-
-
+.bi-chevron-double-down:hover
+{
+  cursor: pointer;
+  transform: rotateX(90deg);
+}
