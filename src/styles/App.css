@@ -4,11 +4,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 1.2rem;
+  /* font-size: 1.2rem; */
 }
 
 html {
-  /* font-size: 1.2rem; */
+    /* font-size: 1.2rem; */
   font-family: "Roboto", sans-serif, OpenSans;
 }
 
@@ -148,7 +148,7 @@ a {
   /* font-size: 2.1rem; */
   font-weight: 500;
   color: #482ff7;
-  margin: 0px 0px 0px 60px;
+  margin: 0px 0px 0px 0px;
 }
 
 
@@ -360,7 +360,7 @@ a {
     color: rgb(127, 131, 136);
   }
   .nav-logo{
-    margin:  0px 0px 0px 0px ;
+    margin: 0px 0px 0px -10px;
   }
 
   .hamburger {

@@ -119,7 +119,7 @@ function Header() {
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
-              <span class="navbar-toggler-icon"></span>
+              <span class="navbar-toggler-icon me-0"></span>
             </button>
             <div
               class="collapse navbar-collapse justify-content-end"
@@ -142,7 +142,7 @@ function Header() {
                 <li class="nav-item my-2 my-sm-0">  
                   <button
                     type="button"
-                    class="btn enquire_btn btn-lg fw-bold me-4 me-sm-0 my-4"
+                    class="btn enquire_btn btn-lg fw-bold  me-sm-0 my-4"
                     data-bs-toggle="modal"
                     data-bs-target="#exampleModal"
                   >
