@@ -1,7 +1,6 @@
 import React from "react";
 
-function Model({ Open }) {
-  if (Open === true) {
+function Model() {
     return (
       <div
         class="modal fade"
@@ -192,9 +191,6 @@ function Model({ Open }) {
         </div>
       </div>
     );
-  } else {
-      return<></>;
-  }
 }
 
 export default Model;
