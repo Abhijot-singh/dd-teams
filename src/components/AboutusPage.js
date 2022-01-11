@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './Header';
+import Model from "./Model";
 import Footer from './Footer';
 import Section from './AboutusPage/Section';
 function AboutusPage() {
@@ -10,6 +11,7 @@ function AboutusPage() {
            <Section/>
            <Footer/>              
         </div>
+        <Model/>
         </div>
     );
 }

@@ -12,7 +12,7 @@ html {
   font-family: "Roboto", sans-serif, OpenSans;
 }
 
-li {
+/* li {
   list-style: none;
 }
 
@@ -70,7 +70,88 @@ a {
   font-size: 2.1rem;
   font-weight: 500;
   color: #482ff7;
+} */
+
+/* new styles for nav bar -------------------------------------------------------------------------*/
+
+
+
+
+
+/* .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: #011627;
 }
+.navbar-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-item {
+  margin-left: 5rem;
+}
+.nav-link {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #fff;
+}
+.nav-link:hover {
+  fill: #fd7e14;
+}
+.nav-logo {
+  font-size: 2.1rem;
+  font-weight: 500;
+  color: #482ff7;
+  margin: 0px 0px 0px 60px;
+} */
+
+
+/* newest styles */
+
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.header {
+  border-bottom: 1px solid #e2e8f0;
+  background-color: #011627;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: #011627;
+}
+.navbar-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-item {
+  margin-left: 5rem;
+}
+.nav-link {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #fff;
+}
+.nav-link:hover {
+  fill: #fd7e14;
+}
+.nav-logo {
+  /* font-size: 2.1rem; */
+  font-weight: 500;
+  color: #482ff7;
+  margin: 0px 0px 0px 60px;
+}
+
+
 /* nav bar style end here.................. */
 /* section 1 style start */
 .container_section_one {
@@ -277,6 +358,9 @@ a {
   .nav-link {
     font-size: 1.6rem;
     color: rgb(127, 131, 136);
+  }
+  .nav-logo{
+    margin:  0px 0px 0px 0px ;
   }
 
   .hamburger {

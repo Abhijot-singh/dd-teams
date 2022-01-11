@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import Doionsimg2 from "../../images/Doionsimg2.png"
 import Model from "../Model";
 function Herosection() {
-  const [get, set] = useState(false);
-  function newHandler(){
-    set(true);
-  }
+  // const [get, set] = useState(false);
+  // function newHandler(){
+  //   set(true);
+  // }
   return (
     <div className="hero-section">
       <div className="container-fluid">
@@ -20,7 +20,7 @@ function Herosection() {
           <p>Now in Jabalpur</p>
           <p class="fw-bold">Become a Full-stack developer in 12 weeks</p>
           <button
-            type="button" onClick={newHandler}
+            type="button" 
             class="btn enquire_btn btn-sm fw-bold my-4 text-nowrap"
             data-bs-toggle="modal"
             data-bs-target="#exampleModal"
@@ -31,7 +31,7 @@ function Herosection() {
         </div>
       </div>
       </div>
-      <Model get={get}/>
+      <Model/>
     </div>
 
   );
