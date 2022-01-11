@@ -15,6 +15,7 @@ function Herosection() {
         <div
           class="col-md-5 bg-light opacity-75 py-5 px-5 section1_cont text-dark text-center justify-content-center"
         >
+        <div class="section1_heading">
           <h1 class="fw-bold">Coding Bootcamp</h1>
           <p>Now in Jabalpur</p>
           <p class="fw-bold">Become a Full-stack developer in 12 weeks</p>
@@ -26,6 +27,7 @@ function Herosection() {
           >
             Enquire now
           </button>
+          </div>
         </div>
       </div>
       </div>

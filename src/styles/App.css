@@ -368,3 +368,33 @@ a {
   width: 100%;
 }
 
+@media screen and (min-width: 1440px) {
+  .section_one_img {
+    height: 75vh;
+  }
+  .section1_heading {
+    padding-top: 100px;
+  }
+}
+
+
+
+.accordion-button {
+  background: #ff9f1c5e;
+  color: #000;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.accordion-button:not(.collapsed) {
+  background: #ff9f1c5e;
+  color: #000;
+}
+.accordion-button::after {
+  background-image: url("../images/dubble_arrow.svg");
+}
+.accordion-button:not(.collapsed)::after {
+  background-image: url("../images/dubble_arrow.svg");
+}
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.25rem #ffa01c34;
+}

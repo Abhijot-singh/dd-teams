@@ -9,7 +9,7 @@ function Courses() {
             <Header/>
             <Secone/>
             <div class="row justify-content-center">
-                <div className='col-md-8 my-5'>
+                <div >
                     <Sectwo/>           
                 </div>
             </div>
