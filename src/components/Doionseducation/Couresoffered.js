@@ -1,5 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 function Couresoffered() {
+  function codingCareer(){
+       
+  }
     return (
         <div>
             <div class="row justify-content-center">
@@ -15,7 +19,7 @@ function Couresoffered() {
         <div class="col-md-10">
           <div class="row d-flex justify-content-center">
             <div class="col-md-4 my-2">
-              <div class="course_offer_ani py-2">
+              <div class="course_offer_ani py-2" onClick={codingCareer}>
                 <h1>Coding as a career</h1>
               </div>
             </div>
