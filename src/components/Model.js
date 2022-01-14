@@ -230,8 +230,12 @@
 // export default Model;
 
 import React, { useState } from "react";
+// import Success from "./Success";
+import succ from "../images/Group 195.png";
+import axios from "axios";
 
 function Model() {
+  let count = 0;
   const [Name, setName] = useState("");
   const [Namerr, setNamerr] = useState("");
 
@@ -258,6 +262,41 @@ function Model() {
 
   const [Email, setEmail] = useState("");
   const [Emailerr, setEmailerr] = useState("");
+
+  const [success, setsuccess] = useState(false);
+
+  const [loading, setLoading] = useState(false);
+  const [_success, set_success] = useState(false);
+  async function submitApplication() {
+    try {
+      setLoading(true);
+      const data = {
+        email: Email,
+        contact: Contanct,
+        name: Name,
+        dateOfBirth: Dob,
+        age: Age,
+        gender: Gender,
+        place: Place,
+        school: School,
+        codingProficiency: Skill,
+      };
+      const res = await axios.post(
+        // "https://c0e6-103-246-41-141.ngrok.io/api/apply/bootcamp",
+        "https://mytym.in/bot/api/apply/bootcamp",
+        data
+      );
+      console.log(res.data);
+      if (res.status === 200) {
+        setLoading(false);
+        setsuccess(true);
+      }
+    } catch (error) {
+      setLoading(false);
+      setsuccess(false);
+    }
+  }
+
   function handleName(e) {
     setNamerr("");
     setName(e.target.value);
@@ -291,35 +330,43 @@ function Model() {
     setSkill(e.target.value);
   }
   function handleEmail(e) {
-    setEmailerr('');
-    setEmail(e.target.value)
+    setEmailerr("");
+    setEmail(e.target.value);
   }
+
   function handleSubmit(e) {
     e.preventDefault();
+
     if (Name !== "") {
     } else {
       setNamerr("required");
     }
+
     if (Dob !== "") {
     } else {
       setDoberr("Required");
     }
+
     if (Place !== "") {
     } else {
       setPlacerr("required");
     }
+
     if (Age !== "") {
     } else {
       setAgeerr("required");
     }
+
     if (Gender !== "") {
     } else {
       setGendererr("required");
     }
+
     if (School !== "") {
     } else {
       setSchoolerr("required");
     }
+
     if (Contanct !== "") {
       const phoneRegex = /^[7-9][0-9]{9}$/;
       if (phoneRegex.test(Contanct)) {
@@ -330,29 +377,35 @@ function Model() {
     } else {
       setContancterr("required");
     }
+
     if (Skill !== "") {
     } else {
       setSkillerr("required");
     }
 
     if (Email !== "") {
-      const emailRegex =  /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
-    if (emailRegex.test(Email)) {
-      setEmailerr("");
-      setEmail(Email);
-    } else {
-      setEmailerr("Enter valid email");
-    }
+      const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
+      if (emailRegex.test(Email)) {
+        setEmailerr("");
+        setEmail(Email);
+      } else {
+        setEmailerr("Enter valid email");
+      }
     } else {
       setEmailerr("required");
     }
+
+    setsuccess(true);
+    submitApplication();
   }
+
   return (
     <div>
       <div
         class="modal fade"
+        data-bs-backdrop="static"
         id="exampleModal"
-        tabindex="-1"
+        tabIndex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
       >
@@ -566,14 +619,60 @@ function Model() {
                 <div class="modal-footer d-flex justify-content-center">
                   <button
                     type="submit"
+                    disabled={!Name || !Email || !Contanct}
                     class="btn btn-warning btn-lg fw-bold"
-                    // data-bs-toggle="modal"
+                    data-bs-toggle="modal"
+                    data-bs-dismiss="modal"
                     data-bs-target="#exampleModal_two"
                   >
                     Submit
                   </button>
                 </div>
               </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* <Success success={success}/> */}
+      <div
+        class="modal fade"
+        id="exampleModal_two"
+        tabIndex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              {loading ? (
+                <>Loading...</>
+              ) : (
+                <div>
+                  {success ? (
+                    <div>
+                      <p class="text-center">
+                        <img src={succ} alt="" />
+                      </p>
+                      <p class="h4 text-center">
+                        Form submitted succesfully. Please check your email for
+                        futher details.
+                      </p>
+                    </div>
+                  ) : (
+                    <div>
+                      <p>Duplicate Email or Contact information is used.</p>
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           </div>
         </div>

@@ -57,7 +57,7 @@ function Contanctus() {
         <MyComponent className="col-md-4 col-lg-12" />
 
         <div className="col-md-4">
-          <form onSubmit={submmision}>
+          {/* <form onSubmit={submmision}>
             <div className="input-group mb-3">
               <input
                 type="text"
@@ -88,7 +88,7 @@ function Contanctus() {
             </div>
             <div class="my-3 d-inline-flex">
               <Recaptcha  sitekey="6Ld9KPEdAAAAABbGoRv1gDZLt_lkaXj6ak1Q4oSl" type="audio" />
-              {/* <lavel className="text-start mx-4">package</lavel> */}
+        
               <button
                 type="submit"
                 className="btn enquire_btn btn-lg fw-bold ms-auto"
@@ -96,7 +96,7 @@ function Contanctus() {
                 Submit
               </button>
             </div>
-          </form>
+          </form> */}
         </div>
       </div>
     </div>

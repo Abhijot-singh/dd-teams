@@ -109,7 +109,7 @@ function Header() {
         <nav class="navbar navbar-expand-lg navbar-light">
           <div class="container-fluid">
             {/* <a href="#" class="nav-logo"> <img src={Doionsimg} /></a> */}
-            <Link className='nav-logo' to="/"><img src={Doionsimg}/></Link>
+            <Link className='nav-logo img-fluid' to="/"><img src={Doionsimg}/></Link>
             <button
               class="navbar-toggler btn-close-white"
               type="button"
