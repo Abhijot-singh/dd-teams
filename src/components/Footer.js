@@ -16,8 +16,8 @@ function Footer() {
           </p>
         </div>
         <div class="col-md-4 text-left pt-5">
-          <i class="bi bi-facebook fs-2 me-3"></i>
-          <i class="bi bi-instagram fs-2"></i>
+          <a target='_blank' href="https://www.facebook.com/doionsengineering"><i class="bi bi-facebook fs-2 me-3 text-white"></i></a>
+          <a target='_blank' href="https://www.instagram.com/doionsdotcom/"><i class="bi bi-instagram fs-2 text-white"></i></a>
         </div>
       </div>
     </div>

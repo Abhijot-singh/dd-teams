@@ -106,7 +106,7 @@ function Opensectwo(props) {
                   conducted <strong> 5 days a week </strong>and the duration of the <strong> classes will
                   be from 9.00 AM - 6.00 PM.</strong>
                 </p>
-                <p class="text-center">To download the syllabus, click here-<a href="Syllabus2.pdf">Download Syllabus</a></p>
+                <p class="text-center">To download the syllabus, click here-<a href='/documents/Syllabus2.pdf'>Download Syllabus</a></p>
       </div>
     </div>
   </div>

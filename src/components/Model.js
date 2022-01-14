@@ -291,14 +291,14 @@ function Model() {
     setSkill(e.target.value);
   }
   function handleEmail(e) {
-    setEmailerr("");
-    setEmail(e.target.value);
+    setEmailerr('');
+    setEmail(e.target.value)
   }
   function handleSubmit(e) {
     e.preventDefault();
     if (Name !== "") {
     } else {
-      setNamerr("Name is required");
+      setNamerr("required");
     }
     if (Dob !== "") {
     } else {
@@ -321,6 +321,12 @@ function Model() {
       setSchoolerr("required");
     }
     if (Contanct !== "") {
+      const phoneRegex = /^[7-9][0-9]{9}$/;
+      if (phoneRegex.test(Contanct)) {
+        setContancterr("");
+      } else {
+        setContancterr("enter valid phone number");
+      }
     } else {
       setContancterr("required");
     }
@@ -330,11 +336,13 @@ function Model() {
     }
 
     if (Email !== "") {
-      const emailRegex =
-        /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-      if (emailRegex.test(Email)) {
-        setEmailerr("");
-      }
+      const emailRegex =  /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
+    if (emailRegex.test(Email)) {
+      setEmailerr("");
+      setEmail(Email);
+    } else {
+      setEmailerr("Enter valid email");
+    }
     } else {
       setEmailerr("required");
     }
@@ -360,12 +368,11 @@ function Model() {
               ></button>
             </div>
             <div class="modal-body">
-              
-                <div class="design_div">
-                  <div class="design_div_two">
-                    <h1 class="text-start px-5 my-1 py-3 mb-4">Enquiry form</h1>
-                  </div>
+              <div class="design_div">
+                <div class="design_div_two">
+                  <h1 class="text-start px-5 my-1 py-3 mb-4">Enquiry form</h1>
                 </div>
+              </div>
               <form id="form" onSubmit={handleSubmit}>
                 <div class="row mb-3">
                   <label
@@ -393,7 +400,7 @@ function Model() {
                   </label>
                   <div class="col-sm-8">
                     <input
-                      type="Dob"
+                      type="date"
                       class="form-control"
                       id="inputDob"
                       onChange={handleDob}
@@ -408,7 +415,7 @@ function Model() {
                   </label>
                   <div class="col-sm-8">
                     <input
-                      type="Place"
+                      type="place"
                       class="form-control"
                       id="inputPlace"
                       onChange={handlePlace}
@@ -423,7 +430,7 @@ function Model() {
                   </label>
                   <div class="col-sm-8">
                     <input
-                      type="Age"
+                      type="number"
                       class="form-control"
                       id="inputAge"
                       onChange={handleAge}
@@ -477,7 +484,7 @@ function Model() {
                   </label>
                   <div class="col-sm-8">
                     <input
-                      type="School"
+                      type="text"
                       class="form-control"
                       id="inputSchool"
                       onChange={handleSchool}
@@ -492,7 +499,7 @@ function Model() {
                   </label>
                   <div class="col-sm-8">
                     <input
-                      type="ContactNo"
+                      type=""
                       class="form-control"
                       id="inputContactNo"
                       onChange={handleContanct}

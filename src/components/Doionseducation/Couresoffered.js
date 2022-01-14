@@ -18,7 +18,7 @@ function Couresoffered() {
   return (
     <div >
       <div class="row justify-content-center">
-      <div class="col-md-10">
+      <div class="col-md-8">
       <div class="design_div">
         <div class="design_div_two">
           <h1 class="px-4 py-3 my-5">Courses Offered</h1>
@@ -27,7 +27,7 @@ function Couresoffered() {
     </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-md-10">
+        <div class="col-md-8">
           <div class="row d-flex justify-content-center">
             <div class="col-md-4 my-2" onClick={codingCareer}>
               <div class="course_offer_ani py-2" >

@@ -11,7 +11,7 @@ function Aboutus() {
   return (
     <div>
         <div class="row justify-content-center">
-          <div class="col-md-10">
+          <div class="col-md-8">
             <div class="design_div">
               <div class="design_div_two">
                 <h1 class="px-4 py-3 my-5">About Us</h1>
@@ -26,7 +26,7 @@ function Aboutus() {
           </div>
         </div>
         <div class="row justify-content-center">
-          <div class="col-md-10">
+          <div class="col-md-8">
             <p class="fs-4 text-left pt-4">
               Enhance your technical and entrepreneurial skills with intense
               coding bootcamps by Doions education. An initiative to educate

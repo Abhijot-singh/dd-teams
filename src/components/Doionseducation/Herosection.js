@@ -83,7 +83,7 @@ function Herosection() {
                   type="button"
                   class="btn btn-lg enquire_btn fw-bold text-nowrap"
                   data-bs-toggle="modal"
-                  data-bs-target="#exampleModal"
+                  data-bs-target  ="#exampleModal"
                 >
                   Enquire now
                 </button>
