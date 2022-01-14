@@ -3,7 +3,6 @@ import "../styles/App.css";
 import Homepage from "./Homepage";
 import AboutusPage from "./AboutusPage";
 import Courses from "./Courses";
-//import Codingcareer from "./Doionseducation/threeCourses/Codingcareer";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 function App() {
   return (
