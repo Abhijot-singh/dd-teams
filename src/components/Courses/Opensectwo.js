@@ -8,12 +8,12 @@ function Opensectwo(props) {
           <div class="accordion" id="accordionExample">
   <div class="accordion-item mb-3">
     <h2 class="accordion-header" id="headingOne">
-      <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+      <button class="accordion-button fw-bold  collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
      Coding as a hobby
       </button>
                
     </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
       <div class="accordion-body">
           <p>
                   <strong>
@@ -64,11 +64,11 @@ function Opensectwo(props) {
   </div>
   <div class="accordion-item mb-3">
     <h2 class="accordion-header" id="headingTwo">
-      <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+      <button class="accordion-button fw-bold " type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
       Coding as a career
       </button>
     </h2>
-    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+    <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
       <div class="accordion-body">
          <p>
                   If you aspire to make your career in technology, aiming to get

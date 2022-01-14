@@ -1,6 +1,13 @@
-import React from "react";
+import React  from "react";
 import Doionsimg3 from "../../images/Doionsimg3.png";
+import {useHistory} from "react-router-dom"
+
 function Aboutus() {
+  let history = useHistory();
+  function readMore(){
+    window.scrollTo({ top:0, behavior:'auto' }) 
+     history.push('/aboutus-page')
+  }
   return (
     <div>
         <div class="row justify-content-center">
@@ -27,7 +34,7 @@ function Aboutus() {
               technology. Under this, we’ll be conducting coding classes for
               anyone who wishes to learn to code. The classes will be in the
               form of <b>coding boot camps.</b>
-              <a href="#">Read more...</a>
+              <a href="" onClick={readMore}>Read more...</a>
             </p>
           </div>
         </div>

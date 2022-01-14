@@ -5,6 +5,7 @@ import Aboutus from './Doionseducation/Aboutus';
 import Herosection from './Doionseducation/Herosection';
 import Couresoffered from './Doionseducation/Couresoffered';
 import Contanctus from './Doionseducation/Contanctus';
+import Stickybar from './Stickybar';
 function Homepage() {
     return (
         <div className='home-page'>
@@ -14,6 +15,7 @@ function Homepage() {
         <Aboutus/>
         <Couresoffered/>
         <Contanctus/>
+        <Stickybar/>
         <Footer/>
         </div>
         </div>

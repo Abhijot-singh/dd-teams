@@ -4,6 +4,7 @@ import Model from "./Model";
 import Footer from './Footer';
 import Secone from './Courses/Secone';
 import Sectwo from './Courses/Sectwo';
+import Stickybar from './Stickybar';
 function Courses() {
     return (
         <div className='container-fluid'>
@@ -15,6 +16,7 @@ function Courses() {
                 </div>
                 <Model/>
             </div>
+            <Stickybar/>
             <Footer/>
         </div>
     );

@@ -58,7 +58,7 @@
 //                           // value={Name}
 //                         />
 //                       </div>
-                        // {/* {Namerr&&<div className="error-msg">{Namerr}</div>} */}
+// {/* {Namerr&&<div className="error-msg">{Namerr}</div>} */}
 //                     </div>
 //                     {/* <!-- 2................. --> */}
 //                     <div class="row mb-3">
@@ -229,123 +229,116 @@
 
 // export default Model;
 
-import React,{useState} from "react";
+import React, { useState } from "react";
 
 function Model() {
-  const[Name, setName] = useState('');
-  const[Namerr, setNamerr] = useState('')
+  const [Name, setName] = useState("");
+  const [Namerr, setNamerr] = useState("");
 
-  const[Dob, setDob] = useState('');
-  const[Doberr, setDoberr] = useState('')
+  const [Dob, setDob] = useState("");
+  const [Doberr, setDoberr] = useState("");
 
-  const[Place, setPlace] = useState('');
-  const[Placeerr, setPlacerr] = useState('')
+  const [Place, setPlace] = useState("");
+  const [Placeerr, setPlacerr] = useState("");
 
-  const[Age, setAge] = useState('');
-  const[Ageerr, setAgeerr] = useState('')
+  const [Age, setAge] = useState("");
+  const [Ageerr, setAgeerr] = useState("");
 
-  const[School, setSchool] = useState('');
-  const[Schoolerr, setSchoolerr] = useState('')
-  
-  const[Gender, setGender] = useState('');
-  const[Gendererr, setGendererr] = useState('')
+  const [School, setSchool] = useState("");
+  const [Schoolerr, setSchoolerr] = useState("");
 
-  const[Contanct, setContanct] = useState('');
-  const[Contancterr, setContancterr] = useState('')
+  const [Gender, setGender] = useState("");
+  const [Gendererr, setGendererr] = useState("");
 
-  const[Skill, setSkill] = useState('');
-  const[Skillerr, setSkillerr] = useState('')
-   
-  const[Email, setEmail] = useState('');
-  const[Emailerr, setEmailerr] = useState('')
-  function handleName(e){
-      setNamerr('');
-      setName(e.target.value);
-   }
-   function handleDob(e){
-     setDoberr('')
-     setDob(e.target.value)
-   }
-   function handlePlace(e){
-    setPlacerr('')
-    setPlace(e.target.value)
+  const [Contanct, setContanct] = useState("");
+  const [Contancterr, setContancterr] = useState("");
+
+  const [Skill, setSkill] = useState("");
+  const [Skillerr, setSkillerr] = useState("");
+
+  const [Email, setEmail] = useState("");
+  const [Emailerr, setEmailerr] = useState("");
+  function handleName(e) {
+    setNamerr("");
+    setName(e.target.value);
   }
-  function handleAge(e){
-    setAgeerr('')
-    setAge(e.target.value)
+  function handleDob(e) {
+    setDoberr("");
+    setDob(e.target.value);
   }
-  function handleGender(e){
-    setGendererr('');
-    setGender(e.target.value)
+  function handlePlace(e) {
+    setPlacerr("");
+    setPlace(e.target.value);
   }
-  function handleSchool(e){
-    setSchoolerr('');
-    setSchool(e.target.value)
+  function handleAge(e) {
+    setAgeerr("");
+    setAge(e.target.value);
   }
-  function handleContanct(e){
-    setContancterr('');
-    setContanct(e.target.value)
+  function handleGender(e) {
+    setGendererr("");
+    setGender(e.target.value);
   }
-  function handleSkill(e){
-    setSkillerr('');
-    setSkill(e.target.value)
+  function handleSchool(e) {
+    setSchoolerr("");
+    setSchool(e.target.value);
   }
-  function handleEmail(e){
-    setEmailerr('');
+  function handleContanct(e) {
+    setContancterr("");
+    setContanct(e.target.value);
+  }
+  function handleSkill(e) {
+    setSkillerr("");
+    setSkill(e.target.value);
+  }
+  function handleEmail(e) {
+    setEmailerr("");
     setEmail(e.target.value);
   }
-function handleSubmit(e){
-  e.preventDefault();
-  if(Name !== ''){
-
-  }else{
-    setNamerr('Name is required')
-  }
-  if(Dob !== ''){
-    
-  }else{
-    setDoberr('Required')
-  }
-  if(Place!== ''){
-
-  }else{
-    setPlacerr('required');
-  }
-  if(Age!==''){
-
-  }else{
-    setAgeerr('required')
-  }
-  if(Gender!==''){
-
-  }else{
-    setGendererr('required')
-  }
-  if(School !== ''){
-    
-  }else{
-    setSchoolerr('required')
-  }
-  if(Contanct!== ''){
-
-  }else{
-    setContancterr('required')
-  }
-  if(Skill!==''){
-
-  }else{
-    setSkillerr('required')
-  }
-
-  if(Email!==''){
-    const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    if(emailRegex.test(Email)){
-      setEmailerr('')
+  function handleSubmit(e) {
+    e.preventDefault();
+    if (Name !== "") {
+    } else {
+      setNamerr("Name is required");
     }
-  }else{
-    setEmailerr('required');
+    if (Dob !== "") {
+    } else {
+      setDoberr("Required");
+    }
+    if (Place !== "") {
+    } else {
+      setPlacerr("required");
+    }
+    if (Age !== "") {
+    } else {
+      setAgeerr("required");
+    }
+    if (Gender !== "") {
+    } else {
+      setGendererr("required");
+    }
+    if (School !== "") {
+    } else {
+      setSchoolerr("required");
+    }
+    if (Contanct !== "") {
+    } else {
+      setContancterr("required");
+    }
+    if (Skill !== "") {
+    } else {
+      setSkillerr("required");
+    }
+
+    if (Email !== "") {
+      const emailRegex =
+        /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+      if (emailRegex.test(Email)) {
+        setEmailerr("");
+      }
+    } else {
+      setEmailerr("required");
+    }
   }
-}
   return (
     <div>
       <div
@@ -367,11 +360,12 @@ function handleSubmit(e){
               ></button>
             </div>
             <div class="modal-body">
-              <div class="design_div">
-                <div class="design_div_two">
-                  <h1 class="text-start px-5 my-5 py-3">Enquiry form</h1>
+              
+                <div class="design_div">
+                  <div class="design_div_two">
+                    <h1 class="text-start px-5 my-1 py-3 mb-4">Enquiry form</h1>
+                  </div>
                 </div>
-              </div>
               <form id="form" onSubmit={handleSubmit}>
                 <div class="row mb-3">
                   <label
@@ -383,12 +377,14 @@ function handleSubmit(e){
                   </label>
                   <div class="col-sm-8">
                     <input
-                     type="text" class="form-control" id="inputName"
-                     onChange={handleName}  
-                     value={Name}
-                     />
+                      type="text"
+                      class="form-control"
+                      id="inputName"
+                      onChange={handleName}
+                      value={Name}
+                    />
                   </div>
-                 {Namerr&&<div className="error-msg">{Namerr}</div>}
+                  {Namerr && <div className="error-msg">{Namerr}</div>}
                 </div>
 
                 <div class="row mb-3">
@@ -396,9 +392,14 @@ function handleSubmit(e){
                     Date of Birth
                   </label>
                   <div class="col-sm-8">
-                    <input type="Dob" class="form-control" id="inputDob" onChange={handleDob} />
+                    <input
+                      type="Dob"
+                      class="form-control"
+                      id="inputDob"
+                      onChange={handleDob}
+                    />
                   </div>
-                  {Doberr&&<div className="error-msg">{Doberr}</div>}
+                  {Doberr && <div className="error-msg">{Doberr}</div>}
                 </div>
 
                 <div class="row mb-3">
@@ -406,9 +407,14 @@ function handleSubmit(e){
                     Place
                   </label>
                   <div class="col-sm-8">
-                    <input type="Place" class="form-control" id="inputPlace" onChange={handlePlace} />
+                    <input
+                      type="Place"
+                      class="form-control"
+                      id="inputPlace"
+                      onChange={handlePlace}
+                    />
                   </div>
-                  {Placeerr&&<div className="error-msg">{Placeerr}</div>}
+                  {Placeerr && <div className="error-msg">{Placeerr}</div>}
                 </div>
 
                 <div class="row mb-3">
@@ -416,9 +422,14 @@ function handleSubmit(e){
                     Age
                   </label>
                   <div class="col-sm-8">
-                    <input type="Age" class="form-control" id="inputAge" onChange={handleAge} />
+                    <input
+                      type="Age"
+                      class="form-control"
+                      id="inputAge"
+                      onChange={handleAge}
+                    />
                   </div>
-                  {Ageerr&&<div className="error-msg">{Ageerr}</div>}
+                  {Ageerr && <div className="error-msg">{Ageerr}</div>}
                 </div>
 
                 <div class="row mb-3">
@@ -457,7 +468,7 @@ function handleSubmit(e){
                       Others
                     </label>
                   </div>
-                  {Gendererr&&<div className="error-msg">{Gendererr}</div>}
+                  {Gendererr && <div className="error-msg">{Gendererr}</div>}
                 </div>
 
                 <div class="row mb-3">
@@ -472,7 +483,7 @@ function handleSubmit(e){
                       onChange={handleSchool}
                     />
                   </div>
-                  {Schoolerr&&<div className="error-msg">{Schoolerr}</div>}
+                  {Schoolerr && <div className="error-msg">{Schoolerr}</div>}
                 </div>
 
                 <div class="row mb-3">
@@ -487,7 +498,9 @@ function handleSubmit(e){
                       onChange={handleContanct}
                     />
                   </div>
-                  {Contancterr&&<div className="error-msg">{Contancterr}</div>}
+                  {Contancterr && (
+                    <div className="error-msg">{Contancterr}</div>
+                  )}
                 </div>
 
                 <div class="row mb-3">
@@ -495,9 +508,14 @@ function handleSubmit(e){
                     Email
                   </label>
                   <div class="col-sm-8">
-                    <input type="email" class="form-control" id="inputEmail3" onChange={handleEmail} />
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="inputEmail3"
+                      onChange={handleEmail}
+                    />
                   </div>
-                  {Emailerr&&<div className="error-msg">{Emailerr}</div>}
+                  {Emailerr && <div className="error-msg">{Emailerr}</div>}
                 </div>
 
                 <div class="row mb-3">
@@ -510,7 +528,7 @@ function handleSubmit(e){
                   <div class="col-sm-8 d-flex flex-column">
                     <label>
                       <input
-                        type="checkbox"
+                        type="radio"
                         class="mx-3"
                         name="check"
                         onChange={handleSkill}
@@ -519,7 +537,7 @@ function handleSubmit(e){
                     </label>
                     <label>
                       <input
-                        type="checkbox"
+                        type="radio"
                         class="mx-3"
                         name="check"
                         onChange={handleSkill}
@@ -528,7 +546,7 @@ function handleSubmit(e){
                     </label>
                     <label>
                       <input
-                        type="checkbox"
+                        type="radio"
                         class="mx-3"
                         name="check"
                         onChange={handleSkill}
@@ -536,7 +554,7 @@ function handleSubmit(e){
                       Advanced
                     </label>
                   </div>
-                  {Skillerr&&<div className="error-msg">{Skillerr}</div>}
+                  {Skillerr && <div className="error-msg">{Skillerr}</div>}
                 </div>
                 <div class="modal-footer d-flex justify-content-center">
                   <button
