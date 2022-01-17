@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-import Recaptcha from "react-recaptcha";
+// import { isDisabled } from "@testing-library/user-event/dist/utils";
+import React, { useEffect, useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 import MyComponent from "./MyComponent";
 function Contanctus() {
   const [name, setname] = useState("");
@@ -8,6 +9,22 @@ function Contanctus() {
   const [emailerr, setemailerr] = useState("");
   const [message, setmessage] = useState("");
   const [messagerr, setmessagerr] = useState("");
+
+  const [verified, setverified] = useState(false);
+  const [verifiederr, setverifiederr] = useState("");
+
+
+
+  // function verify(){
+  //   if(verified){
+
+  //   }else{
+  //        setverifiederr('kindly verify first')
+  //   }
+  // }
+  var onloadCallbackkkk = function () {
+    console.log("loaded");
+  };
   function handlename(e) {
     setnamerr("");
     setname(e.target.value);
@@ -42,6 +59,7 @@ function Contanctus() {
       setmessagerr("required");
     }
   }
+
   return (
     <div>
       <div className="row justify-content-center">
@@ -53,11 +71,12 @@ function Contanctus() {
           </div>
         </div>
       </div>
-      <div className="row justify-content-center py-5">
-        <MyComponent className="col-md-4 col-lg-12" />
-
+      <div className="row justify-content-center py-3 ">
         <div className="col-md-4">
-          {/* <form onSubmit={submmision}>
+          <MyComponent />
+        </div>
+        <div className="col-md-4">
+          <form onSubmit={submmision}>
             <div className="input-group mb-3">
               <input
                 type="text"
@@ -87,16 +106,19 @@ function Contanctus() {
               {messagerr && <div className="error-msg">{messagerr}</div>}
             </div>
             <div class="my-3 d-inline-flex">
-              <Recaptcha  sitekey="6Ld9KPEdAAAAABbGoRv1gDZLt_lkaXj6ak1Q4oSl" type="audio" />
-        
+              <ReCAPTCHA sitekey="6Ld9KPEdAAAAABbGoRv1gDZLt_lkaXj6ak1Q4oSl" onChange={()=>{
+                setverified(true);
+              }} />
               <button
                 type="submit"
                 className="btn enquire_btn btn-lg fw-bold ms-auto"
+                disabled={!name || !email || !message || !verified}
               >
                 Submit
               </button>
             </div>
-          </form> */}
+            {verifiederr && <div className="error-msg">{verifiederr}</div>}
+          </form>
         </div>
       </div>
     </div>

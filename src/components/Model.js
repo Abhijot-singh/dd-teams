@@ -433,7 +433,7 @@ function Model() {
                     class="col-sm-4 col-form-label"
                     name="name"
                   >
-                    Name
+                    Name*
                   </label>
                   <div class="col-sm-8">
                     <input
@@ -449,7 +449,7 @@ function Model() {
 
                 <div class="row mb-3">
                   <label for="inputDob" class="col-sm-4 col-form-label">
-                    Date of Birth
+                    Date of Birth*
                   </label>
                   <div class="col-sm-8">
                     <input
@@ -464,7 +464,7 @@ function Model() {
 
                 <div class="row mb-3">
                   <label for="inputPlace" class="col-sm-4 col-form-label">
-                    Place
+                    Place*
                   </label>
                   <div class="col-sm-8">
                     <input
@@ -479,7 +479,7 @@ function Model() {
 
                 <div class="row mb-3">
                   <label for="inputAge" class="col-sm-4 col-form-label">
-                    Age
+                    Age*
                   </label>
                   <div class="col-sm-8">
                     <input
@@ -494,7 +494,7 @@ function Model() {
 
                 <div class="row mb-3">
                   <label for="inputGender" class="col-sm-4 col-form-label">
-                    Gender
+                    Gender*
                   </label>
                   <div class="col-sm-8">
                     <label>
@@ -533,7 +533,7 @@ function Model() {
 
                 <div class="row mb-3">
                   <label for="inputSchool" class="col-sm-4 col-form-label">
-                    School
+                    School*
                   </label>
                   <div class="col-sm-8">
                     <input
@@ -548,7 +548,7 @@ function Model() {
 
                 <div class="row mb-3">
                   <label for="inputContactNo" class="col-sm-4 col-form-label">
-                    Contact No.
+                    Contact No.*
                   </label>
                   <div class="col-sm-8">
                     <input
@@ -565,7 +565,7 @@ function Model() {
 
                 <div class="row mb-3">
                   <label for="inputEmail3" class="col-sm-4 col-form-label">
-                    Email
+                    Email*
                   </label>
                   <div class="col-sm-8">
                     <input
@@ -583,8 +583,9 @@ function Model() {
                     for="inputCodingproficiency"
                     class="col-sm-4 col-form-label"
                   >
-                    Coding proficiency
+                    Coding proficiency*
                   </label>
+                  
                   <div class="col-sm-8 d-flex flex-column">
                     <label>
                       <input
@@ -616,6 +617,7 @@ function Model() {
                   </div>
                   {Skillerr && <div className="error-msg">{Skillerr}</div>}
                 </div>
+                <small className="error-msg">*(required)</small>
                 <div class="modal-footer d-flex justify-content-center">
                   <button
                     type="submit"
