@@ -574,3 +574,20 @@ a {
     margin-left: 400px;
   }
 }
+
+
+
+
+@media (min-width: 320px) {
+  #smaple-map{
+    height: 270px;
+    width: 270px;
+  }
+}
+
+@media (min-width: 768px) {
+  #smaple-map{
+    height: 400px;
+    width: 400px;
+  }
+}

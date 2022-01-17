@@ -54,10 +54,10 @@ function MyComponent() {
            <LoadScript googleMapsApiKey="AIzaSyCb2QadfeVIvVFW0ECQDxDCY-tFk1pCcDY">
               <GoogleMap
                 id="smaple-map"
-                mapContainerStyle={{
-                  height: "400px",
-                  width: "400px"
-                }}
+                // mapContainerStyle={{
+                //   height: "400px",
+                //   width: "400px"
+                // }}
                 center={{  lat: 23.1630, lng: 79.9588 }}
                 zoom={18}
               >

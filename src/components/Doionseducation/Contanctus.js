@@ -76,7 +76,7 @@ function Contanctus() {
           <MyComponent />
         </div>
         <div className="col-md-4">
-          <form onSubmit={submmision}>
+          <form onSubmit={submmision}>  
             <div className="input-group mb-3">
               <input
                 type="text"
@@ -105,10 +105,12 @@ function Contanctus() {
               ></textarea>
               {messagerr && <div className="error-msg">{messagerr}</div>}
             </div>
-            <div class="my-3 d-inline-flex">
+           
+            <div class="my-3">
               <ReCAPTCHA sitekey="6Ld9KPEdAAAAABbGoRv1gDZLt_lkaXj6ak1Q4oSl" onChange={()=>{
                 setverified(true);
               }} />
+              
               <button
                 type="submit"
                 className="btn enquire_btn btn-lg fw-bold ms-auto"
