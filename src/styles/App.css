@@ -528,7 +528,7 @@ a {
     color: black;
   }
   .section1_heading .p_two {
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 50px;
     color: black;
   }
@@ -591,3 +591,4 @@ a {
     width: 400px;
   }
 }
+

@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import MyComponent from "./MyComponent";
+import axios from "axios";
 function Contanctus() {
   const [name, setname] = useState("");
   const [namerr, setnamerr] = useState("");
@@ -12,16 +13,36 @@ function Contanctus() {
 
   const [verified, setverified] = useState(false);
   const [verifiederr, setverifiederr] = useState("");
+  
+  const [loading, setLoading] = useState(false);
+
+
+  async function submitApp(){
+    try{
+    const data_two={
+      name:name,
+      email:email,
+      message:message
+    };
+    const res = await axios.post(
+      "https://mytym.in/bot/api/apply/bootcamp",data_two
+    );
+
+    console.log(res.data_two);
+  if (res.status === 200) {
+    setLoading(false);
+    
+  
+}
+    } 
+ catch (error) {
+  setLoading(false);
+  
+}
+}
 
 
 
-  // function verify(){
-  //   if(verified){
-
-  //   }else{
-  //        setverifiederr('kindly verify first')
-  //   }
-  // }
   var onloadCallbackkkk = function () {
     console.log("loaded");
   };
@@ -58,6 +79,9 @@ function Contanctus() {
     } else {
       setmessagerr("required");
     }
+  
+   submitApp();
+    
   }
 
   return (
