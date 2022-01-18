@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import MyComponent from "./MyComponent";
 import axios from "axios";
+import succ from "../../images/Group 195.png"
+// import Success from "../Success"
 function Contanctus() {
   const [name, setname] = useState("");
   const [namerr, setnamerr] = useState("");
@@ -13,38 +15,35 @@ function Contanctus() {
 
   const [verified, setverified] = useState(false);
   const [verifiederr, setverifiederr] = useState("");
-  
+
   const [loading, setLoading] = useState(false);
-  
 
-  const[Checker, setChecker] = useState(false);
+  const [succc, setsuccc] = useState(false);
 
-  async function submitApp(){
-    try{
-    const data_two={
-      name:name,
-      email:email,
-      message:message
-    };
-    console.log(data_two);
-    const res = await axios.post(
-      "https://mytym.in/bot/api/message/doions-education",data_two
-    );
+  const [Checker, setChecker] = useState(false);
 
-    console.log(res.data_two);
-  if (res.status === 200) {
-    setLoading(false);
-    
-  
-}
-    } 
- catch (error) {
-  setLoading(false);
-  
-}
-}
+  async function submitApp() {
+    try {
+      const data_two = {
+        name: name,
+        email: email,
+        message: message,
+      };
+      console.log(data_two);
+      const res = await axios.post(
+        "https://mytym.in/bot/api/message/doions-education",
+        data_two
+      );
 
-
+      console.log(res.data_two);
+      if (res.status === 200) {
+        setLoading(false);
+        setsuccc(true);
+      }
+    } catch (error) {
+      setLoading(false);
+    }
+  }
 
   var onloadCallbackkkk = function () {
     console.log("loaded");
@@ -82,22 +81,21 @@ function Contanctus() {
     } else {
       setmessagerr("required");
     }
-  
-   submitApp();
-    
+
+    submitApp();
   }
-  function handlEmail(){
-      if (email !== "") {
-        const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
-        if (emailRegex.test(email)) {
-          setemailerr("");
-          setemail(email);
-          setChecker(true);
-        } else {
-          setChecker(false);
-          setemailerr("Enter valid email");
-        }
+  function handlEmail() {
+    if (email !== "") {
+      const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
+      if (emailRegex.test(email)) {
+        setemailerr("");
+        setemail(email);
+        setChecker(true);
+      } else {
+        setChecker(false);
+        setemailerr("Enter valid email");
       }
+    }
   }
 
   return (
@@ -116,7 +114,8 @@ function Contanctus() {
           <MyComponent />
         </div>
         <div className="col-md-4">
-          <form onSubmit={submmision}>  
+          -
+          <form onSubmit={submmision}>
             <div className="input-group mb-3">
               <input
                 type="text"
@@ -146,12 +145,15 @@ function Contanctus() {
               ></textarea>
               {messagerr && <div className="error-msg">{messagerr}</div>}
             </div>
-           
+
             <div class="my-3">
-              <ReCAPTCHA sitekey="6Ld9KPEdAAAAABbGoRv1gDZLt_lkaXj6ak1Q4oSl" onChange={()=>{
-                setverified(true);
-              }} />
-              
+              <ReCAPTCHA
+                sitekey="6Ld9KPEdAAAAABbGoRv1gDZLt_lkaXj6ak1Q4oSl"
+                onChange={() => {
+                  setverified(true);
+                }}
+              />
+
               <button
                 type="submit"
                 className="btn enquire_btn btn-lg fw-bold ms-auto"
@@ -164,6 +166,17 @@ function Contanctus() {
           </form>
         </div>
       </div>
+      {succc && (
+        <div>
+          <p class="text-center">
+            <img src={succ} alt="" />
+          </p>
+          <p class="h4 text-center">
+            Form submitted succesfully. Please check your email for futher
+            details.
+          </p>
+        </div>
+      )}
     </div>
   );
 }
