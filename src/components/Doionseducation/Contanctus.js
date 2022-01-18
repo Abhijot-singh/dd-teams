@@ -91,7 +91,7 @@ function Contanctus() {
         const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
         if (emailRegex.test(email)) {
           setemailerr("");
-          setemailerr(email);
+          setemail(email);
           setChecker(true);
         } else {
           setChecker(false);
