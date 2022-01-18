@@ -580,8 +580,9 @@ a {
 
 @media (min-width: 320px) {
   #smaple-map{
-    height: 270px;
-    width: 270px;
+    height: 300px;
+    width: 300px;
+    margin-bottom: 20px;
   }
 }
 

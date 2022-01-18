@@ -14,8 +14,8 @@ function Model() {
   const [Place, setPlace] = useState("");
   const [Placeerr, setPlacerr] = useState("");
 
-  const [Age, setAge] = useState("");
-  const [Ageerr, setAgeerr] = useState("");
+  // const [Age, setAge] = useState("");
+  // const [Ageerr, setAgeerr] = useState("");
 
   const [School, setSchool] = useState("");
   const [Schoolerr, setSchoolerr] = useState("");
@@ -36,6 +36,10 @@ function Model() {
 
   const [loading, setLoading] = useState(false);
   const [_success, set_success] = useState(false);
+
+  const[Emailchecker, setEmailchecker] = useState(false);
+
+  const[Contanctchecker, setContanctchecker] = useState(false);
   async function submitApplication() {
     try {
       setLoading(true);
@@ -44,7 +48,6 @@ function Model() {
         contact: Contanct,
         name: Name,
         dateOfBirth: Dob,
-        age: Age,
         gender: Gender,
         place: Place,
         school: School,
@@ -77,10 +80,6 @@ function Model() {
   function handlePlace(e) {
     setPlacerr("");
     setPlace(e.target.value);
-  }
-  function handleAge(e) {
-    setAgeerr("");
-    setAge(e.target.value);
   }
   function handleGender(e) {
     setGendererr("");
@@ -121,11 +120,6 @@ function Model() {
       setPlacerr("required");
     }
 
-    if (Age !== "") {
-    } else {
-      setAgeerr("required");
-    }
-
     if (Gender !== "") {
     } else {
       setGendererr("required");
@@ -136,38 +130,51 @@ function Model() {
       setSchoolerr("required");
     }
 
-    if (Contanct !== "") {
-      const phoneRegex = /^[7-9][0-9]{9}$/;
-      if (phoneRegex.test(Contanct)) {
-        setContancterr("");
-      } else {
-        setContancterr("enter valid phone number");
-      }
-    } else {
-      setContancterr("required");
-    }
+    // if (Contanct !== "") {
+    //   const phoneRegex = /^[7-9][0-9]{9}$/;
+    //   if (phoneRegex.test(Contanct)) {
+    //     setContancterr("");
+    //   } else {
+    //     setContancterr("enter valid phone number");
+    //   }
+    // } else {
+    //   setContancterr("required");
+    // }
 
     if (Skill !== "") {
     } else {
       setSkillerr("required");
     }
 
+    setsuccess(true);
+    submitApplication();
+  } 
+   function handlePhone(){
+    if (Contanct !== "") {
+      const phoneRegex = /^[7-9][0-9]{9}$/;
+      if (phoneRegex.test(Contanct)) {
+        setContancterr("");
+        setContanct(Contanct);
+        setContanctchecker(true);
+      } else {
+        setContanctchecker(false);
+        setContancterr("enter valid phone number");
+      }
+    }
+   }
+   function handleMail(){
     if (Email !== "") {
       const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
       if (emailRegex.test(Email)) {
         setEmailerr("");
         setEmail(Email);
+        setEmailchecker(true);
       } else {
+        setEmailchecker(false);
         setEmailerr("Enter valid email");
       }
-    } else {
-      setEmailerr("required");
     }
-
-    setsuccess(true);
-    submitApplication();
-  }
-
+   }
   return (
     <div>
       <div
@@ -246,7 +253,7 @@ function Model() {
                   {Placeerr && <div className="error-msg">{Placeerr}</div>}
                 </div>
 
-                <div class="row mb-3">
+                {/* <div class="row mb-3">
                   <label for="inputAge" class="col-sm-4 col-form-label">
                     Age*
                   </label>
@@ -259,7 +266,7 @@ function Model() {
                     />
                   </div>
                   {Ageerr && <div className="error-msg">{Ageerr}</div>}
-                </div>
+                </div> */}
 
                 <div class="row mb-3">
                   <label for="inputGender" class="col-sm-4 col-form-label">
@@ -325,6 +332,7 @@ function Model() {
                       class="form-control"
                       id="inputContactNo"
                       onChange={handleContanct}
+                      onBlur={handlePhone}
                     />
                   </div>
                   {Contancterr && (
@@ -342,6 +350,7 @@ function Model() {
                       class="form-control"
                       id="inputEmail3"
                       onChange={handleEmail}
+                      onBlur={handleMail}
                     />
                   </div>
                   {Emailerr && <div className="error-msg">{Emailerr}</div>}
@@ -390,7 +399,7 @@ function Model() {
                 <div class="modal-footer d-flex justify-content-center">
                   <button
                     type="submit"
-                    disabled={!Name || !Email || !Contanct || !Dob ||!Place || !Age || !Gender || !School || !Skill}
+                    disabled={!Name || !Email || !Contanct || !Dob ||!Place || !Gender || !School || !Skill ||!Emailchecker ||!Contanctchecker}
                     class="btn btn-warning btn-lg fw-bold"
                     data-bs-toggle="modal"
                     data-bs-dismiss="modal"
@@ -404,7 +413,6 @@ function Model() {
           </div>
         </div>
       </div>
-      {/* <Success success={success}/> */}
       <div
         class="modal fade"
         id="exampleModal_two"

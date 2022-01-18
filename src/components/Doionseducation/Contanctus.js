@@ -15,7 +15,9 @@ function Contanctus() {
   const [verifiederr, setverifiederr] = useState("");
   
   const [loading, setLoading] = useState(false);
+  
 
+  const[Checker, setChecker] = useState(false);
 
   async function submitApp(){
     try{
@@ -24,8 +26,9 @@ function Contanctus() {
       email:email,
       message:message
     };
+    console.log(data_two);
     const res = await axios.post(
-      "https://mytym.in/bot/api/apply/bootcamp",data_two
+      "https://mytym.in/bot/api/message/doions-education",data_two
     );
 
     console.log(res.data_two);
@@ -83,6 +86,19 @@ function Contanctus() {
    submitApp();
     
   }
+  function handlEmail(){
+      if (email !== "") {
+        const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
+        if (emailRegex.test(email)) {
+          setemailerr("");
+          setemailerr(email);
+          setChecker(true);
+        } else {
+          setChecker(false);
+          setemailerr("Enter valid email");
+        }
+      }
+  }
 
   return (
     <div>
@@ -117,6 +133,7 @@ function Contanctus() {
                 class="form-control"
                 placeholder="Email"
                 onChange={handlemail}
+                onBlur={handlEmail}
               />
               {emailerr && <div className="error-msg">{emailerr}</div>}
             </div>
@@ -138,7 +155,7 @@ function Contanctus() {
               <button
                 type="submit"
                 className="btn enquire_btn btn-lg fw-bold ms-auto"
-                disabled={!name || !email || !message || !verified}
+                disabled={!name || !email || !message || !verified || !Checker}
               >
                 Submit
               </button>
