@@ -114,8 +114,22 @@ function Contanctus() {
           <MyComponent />
         </div>
         <div className="col-md-4">
-          -
-          <form onSubmit={submmision}>
+
+          
+      {succc ?( 
+        <div>
+          <p class="text-center">
+            <img src={succ} alt="" />
+          </p>
+          <p class="h4 text-center">
+            Form submitted succesfully. Please check your email for futher
+            details.
+          </p>
+        </div>
+      ):
+      (
+        <>
+        <form onSubmit={submmision}>
             <div className="input-group mb-3">
               <input
                 type="text"
@@ -164,19 +178,10 @@ function Contanctus() {
             </div>
             {verifiederr && <div className="error-msg">{verifiederr}</div>}
           </form>
+        </>
+      )}
         </div>
       </div>
-      {succc && (
-        <div>
-          <p class="text-center">
-            <img src={succ} alt="" />
-          </p>
-          <p class="h4 text-center">
-            Form submitted succesfully. Please check your email for futher
-            details.
-          </p>
-        </div>
-      )}
     </div>
   );
 }

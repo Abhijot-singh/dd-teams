@@ -39,7 +39,7 @@ function Header() {
                   <Link to="/courses" className="nav-link text-white">Courses</Link>
                 </li>
                 <li class="nav-item my-2 my-sm-0">
-                  <a class="nav-link text-white" href="https://doions-education.myty.in/">Blog</a>
+                  <a class="nav-link text-white" target="_blank" href="https://doions-education.myty.in/">Blog</a>
                 </li>
                 <li class="nav-item my-2 my-sm-0">  
                   <button

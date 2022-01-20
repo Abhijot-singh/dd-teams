@@ -6,11 +6,11 @@ function Footer() {
         <div class="row footer_color py-5 mt-5">
         <div class="col-md-4 text-center">
           <h1>Contact Detail</h1>
-          <p>www.doions.com</p>
+          <a className="ftLink" href="https://doions.com/" target="_blank">www.doions.com</a>
         </div>
         <div class="col-md-4 text-start">
           <h1>Address</h1>
-          <p class="text-wrap w-50">
+          <p class="text-wrap w-50"> 
             1st Floor, Raina Tower, South Civil Lines, Jabalpur, Madhya Pradesh
             482001
           </p>
