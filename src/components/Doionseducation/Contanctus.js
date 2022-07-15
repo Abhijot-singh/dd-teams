@@ -31,7 +31,7 @@ function Contanctus() {
       };
       console.log(data_two);
       const res = await axios.post(
-        "https://mytym.in/bot/api/message/doions-education",
+        "axios",
         data_two
       );
 
