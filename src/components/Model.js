@@ -55,7 +55,7 @@ function Model() {
       };
       const res = await axios.post(
         // "https://c0e6-103-246-41-141.ngrok.io/api/apply/bootcamp",
-        "https://mytym.in/bot/api/apply/bootcamp",
+        "",//add db here
         data
       );
       console.log(res.data);

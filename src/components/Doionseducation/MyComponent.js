@@ -51,7 +51,7 @@ import { GoogleMap, Marker, LoadScript } from '@react-google-maps/api';
 function MyComponent() {
   return (
    <div>
-           <LoadScript googleMapsApiKey="AIzaSyBByohd6TMF5CFJ1rKy8YTY-c15Giu7cn0">
+           <LoadScript googleMapsApiKey="">
               <GoogleMap
                 id="smaple-map"
                 // mapContainerStyle={{

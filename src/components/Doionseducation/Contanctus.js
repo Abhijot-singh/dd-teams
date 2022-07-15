@@ -162,7 +162,7 @@ function Contanctus() {
 
             <div class="my-3">
               <ReCAPTCHA
-                sitekey="6Ld9KPEdAAAAABbGoRv1gDZLt_lkaXj6ak1Q4oSl"
+                sitekey="****"
                 onChange={() => {
                   setverified(true);
                 }}
